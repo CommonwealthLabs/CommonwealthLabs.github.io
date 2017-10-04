@@ -1,3 +1,5 @@
+@import '../../styles/variables/gutters';
+
 .related-tags {
   &-container {
     width: 100%;
@@ -12,7 +14,7 @@
 
   &-row {
     float: left;
-    padding: 1.5rem;
+    padding: $gutter-small;
   }
 
   &-text {

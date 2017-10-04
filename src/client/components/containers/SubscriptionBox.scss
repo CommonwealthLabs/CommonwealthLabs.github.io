@@ -1,13 +1,15 @@
+@import '../../styles/variables/gutters';
+
 .subscription {
   &-box {
     float: left;
-    padding: 0 1.5rem;
+    padding: 0 $gutter-small;
     &-container {
       float: left;
       width: 100%;
       height:auto;
       background-color: #F3F3F3;
-      padding: 1.5rem 0 2.5rem 0;
+      padding: $gutter-small 0 2.5rem 0;
     }
 
     &-text {

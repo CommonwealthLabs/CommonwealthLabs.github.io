@@ -2,14 +2,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import appState from './redux/reducers';
 import App from './components/App.react';
 import ProductDescription from './components/ProductDescription.react';
+import Homepage from './components/Homepage.react';
+import NavigationModal from './components/containers/NavigationModal.react';
+import store from './redux/store';
 
 import axios from 'axios';
-
-import { updateCurrentProductView } from './redux/actions';
 
 // import { Router, Route, IndexRoute, Link } from 'react-router';
 import {
@@ -20,26 +19,21 @@ import {
   Link
 } from 'react-router-dom';
 
-let store = createStore(appState);
-const { dispatch } = store;
-
-// import config from './config';
-
-const AppRouter = () => {};
-
-axios.get('http://localhost:8082/products').then(res => {
-  // console.log(res.data);
-  store.dispatch(updateCurrentProductView(res.data));
-  console.log(store.getState());
-});
+const retrieveComponent = (location, callback) => {
+  console.log(location);
+  callback(null, props => <Homepage />);
+};
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <div>
-        <Route path="/" component={App} />
+        <NavigationModal visible={true} />
+        <Route path="/:section/:item" getComponent={retrieveComponent} />
+        <Route path="/homepage" component={Homepage} />
+        <Route path="/article" component={App} />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app-main')
 ); // eslint-disable-line

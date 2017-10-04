@@ -1,7 +1,8 @@
 @import '../../styles/variables/gutters';
 @import '../../styles/mixins/breakpoint-mixins';
 
-.header {
+.nav-section {
+  float: left;
   font-family: 'Helvetica Neue', sans-serif;
   padding: 1.5rem $gutter-small 0 $gutter-small;
   @include tablet-up {
@@ -10,16 +11,33 @@
   @include desktop-up {
     padding: 1.5rem $gutter-large 0 $gutter-large;
   }
-  &-heading {
-    margin: 1rem 0 0 0;
+
+  h3 {
+    // margin: 1rem 0 0 0;
     font-weight: 100;
-    // font-style: italic;
-    font-size: 36px;
-    line-height: 1.2;
-  }
-  &-subheading {
     font-size: 24px;
-    font-weight: 100;
     line-height: 1.2;
   }
+
+  ul {
+    font-weight: 100;
+    font-size: 16px;
+    list-style: none;
+    li {
+      margin: 1rem 0 1rem 1rem;
+      a {
+        color: grey;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-title {
+
+
+
+  }
+
+
+
 }

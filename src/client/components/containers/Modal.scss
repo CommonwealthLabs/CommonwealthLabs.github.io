@@ -1,0 +1,19 @@
+.modal {
+  &-container {
+    float: left;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(255,255,255,1);
+    position: absolute;
+    overflow: hidden;
+
+  }
+
+  &-exit-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+  }
+
+}

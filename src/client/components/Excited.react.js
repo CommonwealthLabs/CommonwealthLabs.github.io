@@ -29,9 +29,10 @@ export const ExcitedComponent = ({
   );
 };
 
-export const mapStateToProps = (state: {
+type StateProps = {
   exclamation: string
-}): { exclamation: string } => {
+};
+export const mapStateToProps = (state: StateProps): StateProps => {
   return { exclamation: state.exclamation };
 };
 

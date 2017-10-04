@@ -1,8 +1,16 @@
 @import '../../styles/mixins/breakpoint-mixins';
 @import '../../styles/mixins/clearfix';
+@import '../../styles/variables/gutters';
 
 .article {
   float: left;
-  padding: 0 1.5rem;
+  padding: 0 $gutter-small;
   @include clearfix;
+
+  @include tablet-up {
+    padding: 0 $gutter-medium;
+  }
+  @include desktop-up {
+    padding: 0 $gutter-large;
+  }
 }

@@ -17,3 +17,11 @@ export const updateCurrentProductView = (
     productData
   };
 };
+
+export const toggleNavMenu = () => {
+  return { type: 'TOGGLE_NAVIGATION_MENU' };
+};
+
+export const closeNavMenu = () => {
+  return { type: 'CLOSE_NAVIGATION_MENU' };
+};

@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const sassLintPlugin = require('sasslint-webpack-plugin');
 const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
 
-const BUILD_DIR = path.resolve(__dirname, 'dist/');
+const BUILD_DIR = path.resolve(__dirname, '');
 const APP_DIR = path.resolve(__dirname, 'src/client/');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
