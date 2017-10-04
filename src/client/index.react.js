@@ -29,9 +29,9 @@ ReactDOM.render(
     <HashRouter>
       <div>
         <NavigationModal visible={true} />
-        <Route path="/:section/:item" getComponent={retrieveComponent} />
-        <Route path="/homepage" component={Homepage} />
-        <Route path="/article" component={App} />
+        {/* <Route path="/:section/:item" getComponent={retrieveComponent} /> */}
+        <Route path="/" component={Homepage} />
+        {/* <Route path="/article" component={App} /> */}
       </div>
     </HashRouter>
   </Provider>,

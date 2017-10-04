@@ -11,6 +11,7 @@ import SquareMap from './containers/SquareMap.react';
 import Paragraph from './ui/Paragraph.react';
 import Header from './ui/Header.react';
 import HeroImage from './ui/HeroImage.react';
+import FooterSection from './ui/FooterSection.react';
 
 import Square from './ui/Square.react';
 
@@ -39,10 +40,27 @@ const Homepage = (): React$Element<> => (
         discord is so popular that at times our #general channel has been
         mistaken for the entire server's place for chat.
       </Paragraph>
+      <Paragraph>
+        If you wish to join us, feel free to visit{' '}
+        <a href="https://www.reddit.com/r/CivCommonwealth">our subreddit</a> and
+        make a post introducing yourself.
+      </Paragraph>
+      <Paragraph>
+        You may also{' '}
+        <a href="https://discord.gg/PucHCUj">
+          join our Discord as a temporary visitor
+        </a>, and ask for a Visitor or Resident role.
+      </Paragraph>
+      <Paragraph>
+        The rest of our site is currently under construction! You can help{' '}
+        <a href="https://github.com/CommonwealthLabs/CommonwealthLabs.github.io/">
+          contribute here
+        </a>.
+      </Paragraph>
     </Article>
 
-    {/* <Header heading="Boroughs" /> */}
-    {/* <Article>
+    {/* <Header heading="Boroughs" />
+    <Article>
       <Paragraph>
         The Kingdom of The Commonwealth is split up into various boroughs.
         Boroughs are what we call self-administrating, semi-autonomous towns in
@@ -53,6 +71,9 @@ const Homepage = (): React$Element<> => (
         You can find more information about our Boroughs below:
       </Paragraph>
     </Article> */}
+    <FooterSection>
+      Copyright (c) 2017 Jupio Media Inc, All Rights Reserved.
+    </FooterSection>
   </div>
 );
 

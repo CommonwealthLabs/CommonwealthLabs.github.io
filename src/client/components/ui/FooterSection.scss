@@ -1,0 +1,28 @@
+@import '../../styles/variables/gutters';
+@import '../../styles/mixins/breakpoint-mixins';
+
+.footer-section {
+  margin: 3rem 0 0 0;
+  width: 100%;
+  float: left;
+  background: #0f0f0f;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+
+  .footer-text {
+    padding: 1rem $gutter-small 1rem $gutter-small;
+    float: left;
+    display: inline-block;
+    @include tablet-up {
+      padding: 1rem $gutter-medium 1rem $gutter-medium;
+    }
+
+    @include desktop-up {
+      padding: 1rem $gutter-large 1rem $gutter-large;
+    }
+  }
+
+}

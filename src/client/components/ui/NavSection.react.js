@@ -17,7 +17,9 @@ const NavSection = ({ section, navItems }) => {
           store.dispatch(closeNavMenu());
         }}
       >
-        <Link to={to}>{children}</Link>
+        {/* <Link to={to}> */}
+        {children}
+        {/* </Link> */}
       </span>
     );
   };
@@ -33,6 +35,7 @@ const NavSection = ({ section, navItems }) => {
   return (
     <div styleName="nav-section">
       <h3>{section}</h3>
+      <h4>(NavMenu Under Construction)</h4>
       <ul>{NavMenuItems}</ul>
     </div>
   );
